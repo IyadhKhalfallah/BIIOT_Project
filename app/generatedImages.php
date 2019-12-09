@@ -7,7 +7,7 @@ use App\mole;
 
 class generatedImages extends Model
 {
-    protected $fillable = ['asymetry', 'border','color','diameter','risk','location','date'];
+    protected $fillable = ['uploadedImage','asymetry', 'border','color','diameter','risk','date','id_mole'];
 
     public function mole()
     {

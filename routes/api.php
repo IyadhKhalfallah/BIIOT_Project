@@ -80,3 +80,10 @@ Route::delete('moles/{id}', function($id) {
 
     return 204;
 });
+
+Route::get('checksPerMole/{id}',function($id){
+    $mole = mole::find($id);
+    $checks = generatedImages::where(['id_mole'=>$id])->get();
+    //$checks = $mole->checks()->get();
+    return $checks;
+});

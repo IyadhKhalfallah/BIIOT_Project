@@ -6,8 +6,8 @@ use App\generatedImages;
 use Illuminate\Database\Eloquent\Model;
 
 class mole extends Model
-{
-    protected $fillable = ['location'];
+{   protected $primaryKey = 'id_mole';
+    protected $fillable = ['location','x','y'];
 
     public function checks()
     {
